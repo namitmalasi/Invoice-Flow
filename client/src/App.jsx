@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./layouts/DashboardLayout";
+import Clients from "./pages/Clients";
 
 import useAuthStore from "./store/authStore";
 
@@ -31,17 +32,7 @@ const App = () => {
       >
         <Route path="/dashboard" element={<Dashboard />} />
 
-        <Route
-          path="/clients"
-          element={
-            <div>
-              <h1 className="text-2xl font-bold">Clients</h1>
-              <p className="mt-2 text-slate-500">
-                Client management coming soon.
-              </p>
-            </div>
-          }
-        />
+        <Route path="/clients" element={<Clients />} />
 
         <Route
           path="/projects"
