@@ -9,6 +9,7 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import Clients from "./pages/Clients";
 
 import useAuthStore from "./store/authStore";
+import Projects from "./pages/Projects";
 
 const App = () => {
   const { fetchUser } = useAuthStore();
@@ -34,17 +35,7 @@ const App = () => {
 
         <Route path="/clients" element={<Clients />} />
 
-        <Route
-          path="/projects"
-          element={
-            <div>
-              <h1 className="text-2xl font-bold">Projects</h1>
-              <p className="mt-2 text-slate-500">
-                Project management coming soon.
-              </p>
-            </div>
-          }
-        />
+        <Route path="/projects" element={<Projects />} />
 
         <Route
           path="/invoices"
